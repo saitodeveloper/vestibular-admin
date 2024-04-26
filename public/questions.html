@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/joi@17.12.1/dist/joi-browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js "></script>
+        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/joeymalvinni/webrtc-ip/dist/bundle.dev.js"></script>
+        <script defer src="/js/build/constants.js"></script>
+        <script defer src="/js/api.js"></script>
+        <script defer src="/js/global.js"></script>
+        <script defer src="/js/cookies.js"></script>
+        <script defer src="/js/device.js"></script>
+        <script defer src="/js/models.js"></script>
+
+        <!-- Local -->
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+        <script defer src="/js/pages/questions.js"></script>
+        <title>Crie a questão</title>
+
+        <style>
+            /* Center the editor container on the screen */
+            .editor-container {
+                padding: 1rem;
+                background-color: #f0f0f0; /* Light grey background */
+            }
+
+            /* Style for the Editor.js holder */
+            #editorjs {
+                padding: 1rem;
+                margin: 0 auto;
+                box-sizing: border-box;
+                height: 100%;
+                width: 80%; /* Adjust the width as needed */
+                max-width: 800px; /* Adjust the maximum width as needed */
+                background-color: #fff; /* Editor background */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow around the editor */
+                border-radius: 4px; /* Optional: rounds the corners of the editor */
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <form data-form-question>
+                <h1>Crie a questão</h1>
+                <p>Instituição:</p>
+                <input data-input-institution />
+                <p>Ano:</p>
+                <input data-input-year />
+                <p>Nome do exame:</p>
+                <input data-input-exam-name />
+                <p>Número da questão:</p>
+                <input data-input-enum />
+                <p>Enunciado:</p>
+                <div class="editor-container">
+                    <div id="editorjs"></div>
+                </div>
+                <button data-button-submit>Enviar</button>
+            </form>
+        </main>
+    </body>
+</html>
