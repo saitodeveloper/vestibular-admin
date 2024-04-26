@@ -117,8 +117,11 @@ const onPromiseOnImageLoad = (image, questionId, indexNumber) =>
                 })
                 const formData = new FormData()
                 formData.append('file', file, 'filename.webp')
-                await uploadQuestionImage(formData, { questionId, indexNumber })
-                resolve()
+                const url = await uploadQuestionImage(formData, {
+                    questionId,
+                    indexNumber
+                })
+                resolve(url)
             }, 'image/webp')
         }
         imgClass.src = image

@@ -2,7 +2,8 @@ const url = window.apiUrl
 const defaultOptions = {
     credentials: 'include',
     headers: {
-        'Access-Control-Allow-Origin': window.apiUrl
+        'Access-Control-Allow-Origin': window.apiUrl,
+        'Content-Type': 'application/json'
     }
 }
 
@@ -62,5 +63,9 @@ const requestPut = (path, body, query, options = defaultOptions) =>
 /** API Routes */
 const authLogin = body => requestPost('/v1/auth/login', body)
 const authOtp = () => requestGet('/v1/auth/otp')
-const uploadQuestionImage = (file, query) =>
-    requestPut('/v1/media/upload/question/image', file, query)
+const uploadQuestionImage = (file, query) => {
+    const options = structuredClone(defaultOptions)
+    delete options.headers['Content-Type']
+
+    return requestPut('/v1/media/upload/question/image', file, query, options)
+}
