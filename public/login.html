@@ -4,36 +4,45 @@
         <!-- Global -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
         <script
             src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
             integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
             crossorigin="anonymous"
         ></script>
-        <script 
-            src="https://cdn.jsdelivr.net/npm/joi@17.12.1/dist/joi-browser.min.js"
-        ></script>
-        <script 
-            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"
-        ></script>
-        <script defer src="/js/request.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/joi@17.12.1/dist/joi-browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js "></script>
+        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/joeymalvinni/webrtc-ip/dist/bundle.dev.js"></script>
+        <script defer src="/js/build/constants.js"></script>
+        <script defer src="/js/api.js"></script>
         <script defer src="/js/global.js"></script>
         <script defer src="/js/cookies.js"></script>
+        <script defer src="/js/device.js"></script>
+        <script defer src="/js/models.js"></script>
 
         <!-- Local -->
-        <link rel="stylesheet" href="/css/login.css" />
-        <script defer src="/js/login.js"></script>
+        <link rel="stylesheet" href="/css/pages/login.css" />
+        <script defer src="/js/pages/login.js"></script>
         <title>Login</title>
     </head>
 
     <body>
+        <script>
+            0
+        </script>
         <main>
-            <form>
+            <form data-form-login>
                 <h1>Login</h1>
-                <p>Username:</p>
-                <input />
+                <p>Email:</p>
+                <input data-input-email />
                 <p>Senha:</p>
-                <input type="password"/>
+                <input data-input-password type="password" />
+                <button data-button-submit>Enviar</button>
             </form>
         </main>
     </body>

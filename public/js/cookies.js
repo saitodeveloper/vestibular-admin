@@ -2,7 +2,7 @@ function cookieToObject() {
     const decodedCookie = decodeURIComponent(document.cookie)
     const object = decodedCookie.split(';').reduce((item, result) => {
         const parts = result.split('=')
-        const key = parts[0]
+        const key = parts[0].trim()
         const value = parts[1]
 
         if (key && value) return { [key]: value, ...item }
@@ -21,9 +21,12 @@ function setCookie(key, value, options = {}) {
     if (!key && !value) return
 
     const cookiesOption = Object.entries(options)
-        .map(([optionKey, optionValue]) => `${optionKey}=${optionValue}`)
+        .map(([optionKey, optionValue]) => {
+            if (optionValue !== '') return `${optionKey.trim()}=${optionValue}`
+            else return `${optionKey.trim()}`
+        })
         .join(';')
-    const cookieArray = [`${key}=${value}`]
+    const cookieArray = [`${key.trim()}=${value}`]
 
     if (cookiesOption) cookieArray.push(cookiesOption)
 
