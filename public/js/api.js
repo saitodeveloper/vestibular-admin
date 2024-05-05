@@ -69,3 +69,5 @@ const uploadQuestionImage = (file, query) => {
 
     return requestPut('/v1/media/upload/question/image', file, query, options)
 }
+const insertQuestion = body => requestPost('/v1/question', body)
+const searchSubject = query => requestGet('/v1/subject', query)

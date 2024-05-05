@@ -68,6 +68,58 @@
                 <div class="editor-container">
                     <div id="editorjs"></div>
                 </div>
+                <span>a- </span><input data-input-a style="width: 90%" /><input
+                    data-input-a-checkbox
+                    type="checkbox"
+                /><br />
+                <span>b- </span><input data-input-b style="width: 90%" /><input
+                    data-input-b-checkbox
+                    type="checkbox"
+                /><br />
+                <span>c- </span><input data-input-c style="width: 90%" /><input
+                    data-input-c-checkbox
+                    type="checkbox"
+                /><br />
+                <span>d- </span><input data-input-d style="width: 90%" /><input
+                    data-input-d-checkbox
+                    type="checkbox"
+                /><br />
+                <span>e- </span><input data-input-e style="width: 90%" /><input
+                    data-input-e-checkbox
+                    type="checkbox"
+                /><br />
+                <p>Matérias Relacionadas:</p>
+                <ul data-tags-container></ul>
+                <div
+                    style="
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                    "
+                >
+                    <style>
+                        .item {
+                            margin: 0;
+                            border: 0 solid gray;
+                            padding: 5px 3px;
+                            border-width: 0 0 1px 0;
+                        }
+
+                        .item:hover {
+                            background: #ccc;
+                        }
+                    </style>
+                    <div
+                        style="
+                            position: absolute;
+                            bottom: 30px;
+                            z-index: 1;
+                            background-color: white;
+                        "
+                        data-sujestion-list-container
+                    ></div>
+                    <input data-input-subject-search />
+                </div>
                 <button data-button-submit>Enviar</button>
             </form>
         </main>

@@ -5,7 +5,7 @@
     "main": ".eslintrc.js",
     "scripts": {
         "generate": "node ./scripts/generator.js",
-        "start": "npm run generate && firebase emulators:start"
+        "local": "npm run generate && firebase emulators:start"
     },
     "author": "",
     "license": "ISC",
